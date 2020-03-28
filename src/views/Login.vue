@@ -3,20 +3,20 @@
     <div class="page">
         <div class="lowin">
             <div class="lowin-brand">
-                <img src="../assets/login_logo.jpg" alt="logo">
+                <img src="../assets/logo.png" alt="logo">
             </div>
             <div class="lowin-wrapper">
                 <div class="lowin-box lowin-login">
                     <div class="lowin-box-inner">
                         <div>
-                            <p>后 台 管 理 系 统</p>
+                            <p>vadmin后台管理系统</p>
                             <div class="lowin-group">
                                 <label>邮箱</label>
-                                <input type="email" autocomplete="email" name="email" class="lowin-input">
+                                <input type="email" v-model="form.email" autocomplete="on" name="email" class="lowin-input">
                             </div>
                             <div class="lowin-group password-group">
                                 <label>密码 <a href="#" class="forgot-link">忘记密码?</a></label>
-                                <input @keyup.enter="normalLogin" type="password" name="password" autocomplete="current-password" class="lowin-input">
+                                <input v-model="form.password" @keyup.enter="normalLogin" type="password" name="password" autocomplete="on" class="lowin-input">
                             </div>
                             <Button class="lowin-btn" style="height: 51px;display: flex;justify-content: center;" type="primary" :loading="loading" @click="normalLogin">
                                 <span v-if="!loading">登 录</span>
@@ -40,6 +40,10 @@
         data(){
             return {
                 loading:false,
+                form:{
+                    email:"jianbo.duan@foxmail.com",
+                    password:"123456"
+                }
             }
         },
         mounted() {
