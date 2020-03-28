@@ -28,7 +28,7 @@
             </div>
         </div>
         <footer class="lowin-footer">
-            Login Page Designed By @itskodinger. 说明文字  <a href="#" target="_blank" title="链接">网页链接</a> - 版权信息等
+            登陆页样式copy from @itskodinger. 说明文字  <a href="#" target="_blank" title="链接">网页链接</a> - 版权信息等
         </footer>
     </div>
 
