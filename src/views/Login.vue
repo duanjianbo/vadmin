@@ -9,7 +9,7 @@
                 <div class="lowin-box lowin-login">
                     <div class="lowin-box-inner">
                         <div>
-                            <p>vadmin后台管理系统</p>
+                            <p>vadmin管理平台</p>
                             <div class="lowin-group">
                                 <label>邮箱</label>
                                 <input type="email" v-model="form.email" autocomplete="on" name="email" class="lowin-input">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <footer class="lowin-footer">
-            登陆页样式copy from @itskodinger. 说明文字  <a href="#" target="_blank" title="链接">网页链接</a> - 版权信息等
+            登陆页样式copy from @itskodinger.   <a href="#" target="_blank" title="链接">网页链接</a> MIT License ©2020 Duan Jianbo
         </footer>
     </div>
 
@@ -53,6 +53,7 @@
                 const that=this;
                 that.loading=true;
                 setTimeout(()=>{
+                    that.$cookies.set('vadmin_token','sample_token');
                     that.$router.replace('/dashboard/main');
                 },1000)
 
@@ -180,6 +181,7 @@
     .lowin .lowin-box p {
         color: var(--color-semidark);
         font-weight: 700;
+        font-size: 18px;
         margin-bottom: 20px;
         text-align: center;
     }

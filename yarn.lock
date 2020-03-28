@@ -8079,6 +8079,11 @@ vue-class-component@^7.0.2, vue-class-component@^7.1.0:
   resolved "https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.2.3.tgz#a5b1abd53513a72ad51098752e2dedd499807cca"
   integrity sha1-pbGr1TUTpyrVEJh1Li3t1JmAfMo=
 
+vue-cookies@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.npm.taobao.org/vue-cookies/download/vue-cookies-1.7.0.tgz#dd8f147ff1579e0cbd5f352dc5dff2696d8760b8"
+  integrity sha1-3Y8Uf/FXngy9XzUtxd/yaW2HYLg=
+
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-5.0.0.tgz#00f4e4da94ec974b821a26ff0ed0f7a78402b8a1"

@@ -12,5 +12,5 @@ module.exports = {
     })
   },
 
-  publicPath: '/vadmin'
+  publicPath: '/vadmin',//建议独立域名部署，删除此行代码。我这里只是为了github pages子目录预览
 }

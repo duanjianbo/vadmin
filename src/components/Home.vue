@@ -104,6 +104,12 @@ export default {
   },
   created() {
     console.log('home created');
+    //首先检查一次本地有没有token，没有去登录。页面长久停留，在接口请求中也会处理token的情况
+    let token=this.$cookies.get('vadmin_token');
+    if(!token){
+      this.$router.replace('/login');
+      return;
+    }
     //console.log(this.$route);
     //打开默认加载的主Tab
     this.newTab({componentName:'Main',title:'主控台',path:'/dashboard/main',keepAlive:true});
@@ -238,6 +244,7 @@ export default {
             content: '<p>确定退出吗？</p>',
             onOk: () => {
                 //清除登录状态
+                this.$cookies.remove('vadmin_token');
                 //回到登录页
                 this.$router.replace('/login');
             },

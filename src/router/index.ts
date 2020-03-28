@@ -51,7 +51,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-//  mode: 'history',
+//  mode: 'history',  //建议使用history模式，我这里只是为了github pages预览正常。
   base: process.env.BASE_URL,
   routes
 })
