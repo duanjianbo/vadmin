@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["user-detail"],{5320:function(t,e,n){"use strict";n.r(e);var c=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("HomeContentLayout",[n("div",{staticClass:"test"},[t._v("用户详情页面"+t._s(this.$route.query.id))])])},s=[],u={name:"UserDetail",mounted:function(){}},i=u,a=(n("7cff"),n("2877")),o=Object(a["a"])(i,c,s,!1,null,"4884dc29",null);e["default"]=o.exports},"7cff":function(t,e,n){"use strict";var c=n("c9f0"),s=n.n(c);s.a},c9f0:function(t,e,n){}}]);
-//# sourceMappingURL=user-detail.d26115b3.js.map
+//# sourceMappingURL=user-detail.5d49b7f7.js.map
