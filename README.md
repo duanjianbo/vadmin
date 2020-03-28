@@ -20,6 +20,8 @@ yarn serve
 ```
 yarn build
 ```
+> if you want to access it through a url that doesn't contain 'vadmin',you can remove it. see: `vue.config.js`  publicPath: '/vadmin'.  
+如果想去除部署url的vadmin子目录，在vue.config.js中删除它即可。
 
 ### Compiles and minifies for preview 打包测试环境 使用.env.preview变量
 ```
