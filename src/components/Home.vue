@@ -5,7 +5,6 @@
       <div class="home-right-header">
           <div class="path-guide">
               <Icon type="ios-menu-outline" class="icon-menu" size="26" @click.native="toggleLeftLayout"></Icon>
-              <Icon type="ios-refresh" class="icon-refresh" size="26" @click.native="refresh"></Icon>
               <Breadcrumb class="breadcrumb">
                   <BreadcrumbItem>Home</BreadcrumbItem>
                   <BreadcrumbItem v-for="item in $route.matched" :key="item.path">{{item.meta.title || '未设置路由meta.title'}}</BreadcrumbItem>
@@ -258,9 +257,6 @@ export default {
     toggleLeftLayout(){
         this.$store.commit('toggleLeftLayout');
     },
-    refresh(){
-        this.$store.commit('refresh',{time:Date.now(),route:this.$route});
-    },
     //重要的全局通知，需要用户手动点击关闭
     notice(title,content){
         this.$Notice.open({
@@ -317,8 +313,8 @@ export default {
           .path-guide{
               display: flex;
               align-items: center;
-              .icon-menu,.icon-refresh{margin-right: 20px;cursor: pointer}
-              .icon-menu:hover,.icon-refresh:hover{background-color:#f5f7f9 }
+              .icon-menu{margin-right: 20px;cursor: pointer}
+              .icon-menu:hover{background-color:#f5f7f9 }
               @media only screen and (min-width: 320px) and (max-width: 767px) {
                   .breadcrumb{display: none}
               }

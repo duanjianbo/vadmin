@@ -8,16 +8,6 @@
     export default {
         name: "WorkPlace",
         mounted() {
-            //监听刷新按钮被点击事件
-            this.$watch(
-                function () {
-                    return this.$store.state.refresh
-                },
-                function (newVal, oldVal) {
-                    console.log('WorkPlace监听到refresh');
-                    //做点什么
-                }
-            )
         }
     }
 </script>

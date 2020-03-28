@@ -6,18 +6,11 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isShowingLeftLayout:true,//是否显示侧边栏
-    refresh:{//上次刷新操作（记录header中刷新按钮被点击事件）
-      time:Date.now(),
-      route:''
-    },
     tabs:new Array<any>()//在右侧内容区域应当显示的tab页集合
   },
   mutations: {
     toggleLeftLayout(state){
       state.isShowingLeftLayout=!state.isShowingLeftLayout
-    },
-    refresh(state,obj){
-      state.refresh=obj;
     },
     newTab(state,tabObj){
       state.tabs.push(tabObj)
