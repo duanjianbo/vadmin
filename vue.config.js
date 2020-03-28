@@ -10,5 +10,7 @@ module.exports = {
       args[0].terserOptions.compress.drop_console = true
       return args
     })
-  }
+  },
+
+  publicPath: '/vadmin'
 }
