@@ -83,7 +83,7 @@ export default {
       return {
           isShowingSetting:false,
           loggedUser:{
-              name:'哈哈哈',
+              name:'DuanJianbo',
               role:'管理员',
           },
       }

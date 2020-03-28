@@ -1,6 +1,12 @@
 # vadmin
 
-## Project setup
+## Snapshots 截图
+![](snapshots/1.png)
+
+## Preview Online 在线预览
+visit [Configuration Reference](https://cli.vuejs.org/config/)
+
+## Project setup 安装
 ```
 yarn install
 ```
