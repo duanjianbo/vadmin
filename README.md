@@ -1,10 +1,10 @@
 # vadmin
 
 ## Snapshots 截图
-![](snapshots/1.png)
+![](snapshots/1.jpg)
 
 ## Preview Online 在线预览
-visit [Configuration Reference](https://cli.vuejs.org/config/)
+visit [https://duanjianbo.github.io/vadmin](https://duanjianbo.github.io/vadmin)
 
 ## Project setup 安装
 ```
