@@ -36,5 +36,8 @@ yarn preview
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Customize configuration  
+See [Configuration Reference](https://cli.vuejs.org/config/).  
+
+### Contact  
+mail:jianbo.duan@foxmail.com  
