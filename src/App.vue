@@ -28,6 +28,19 @@ ul{
 .ivu-table th{
   background-color: unset!important;
 }
+.ivu-menu-dark {
+    background: #191a23 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {
+    background: #101117 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened .ivu-menu-submenu-title {
+    background: #191a23 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    color: #fff;
+    background: #191a23 !important;
+}
 /** 覆盖iview ui框架的样式 end**/
 /** iPad **/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {}

@@ -2,8 +2,9 @@
   <div class="home-left" v-if="isShowingLeftLayout">
     <div class="home-left-top">
       <img class="logo" alt="logo" src="../assets/logo.png"/>
+      <span>vadmin管理平台</span>
     </div>
-    <Menu width="240px" style="overflow-y:auto;" :active-name="$route.path" :open-names="[$route.matched[0].path]">
+    <Menu theme="dark" width="240px" style="overflow-y:auto;" :active-name="$route.path" :open-names="[$route.matched[0].path]">
       <Submenu name="/dashboard">
         <template slot="title">
           <Icon type="ios-paper" />
@@ -61,18 +62,22 @@ export default {
     display: flex;
     flex-direction: column;
     width: auto;
-    background-color: white;
+    background-color: #191a23;//white;
     z-index:40;
     box-shadow: 2px 0 6px rgba(0,21,41,.35);
     .home-left-top{
       display: flex;
       justify-content: center;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #101117;//1px solid #eee;
+      color:rgba(255,255,255,.9);
+      font-weight: bolder;
+      font-size: 15px;
+      align-items: center;
     }
     .home-left-top .logo{
       height:40px;
       width: auto;
-      margin: 10px;
+      margin: 10px 10px 10px -5px;
     }
     .ivu-menu-vertical.ivu-menu-light:after{
       width: 0;
