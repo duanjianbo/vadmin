@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["workplace"],{4699:function(t,n,e){},7128:function(t,n,e){"use strict";var o=e("4699"),a=e.n(o);a.a},f681:function(t,n,e){"use strict";e.r(n);var o=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("HomeContentLayout",[e("div",{staticClass:"test"},[t._v("这是工作台")])])},a=[],c={name:"WorkPlace",mounted:function(){}},s=c,u=(e("7128"),e("2877")),i=Object(u["a"])(s,o,a,!1,null,"1f3e9e86",null);n["default"]=i.exports}}]);
+//# sourceMappingURL=workplace.a71cfd3d.js.map
