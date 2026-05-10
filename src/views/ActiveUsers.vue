@@ -1,43 +1,30 @@
 <template>
-    <HomeContentLayout>
-        <p>活跃用户</p>
-        <p>本页测试长内容，滚动条状态</p>
-        <div class="test-content"></div>
-    </HomeContentLayout>
+  <HomeContentLayout>
+    <p>活跃用户</p>
+    <p>本页测试长内容，滚动条状态</p>
+    <div class="test-content"></div>
+  </HomeContentLayout>
 </template>
 
-<script>
+<script setup lang="ts">
+import { onMounted, onActivated, onDeactivated, onUnmounted } from 'vue'
 
-    export default {
-        name: "ActiveUsers",
-        components: {
+defineOptions({ name: 'ActiveUsers' })
 
-        },
-        created(){
-            console.log('ActiveUsers created');
-        },
-        mounted(){
-            console.log('ActiveUsers mounted');
-        },
-        activated(){
-            console.log('ActiveUsers activated');
-        },
-        deactivated(){
-            console.log('ActiveUsers deactivated');
-        },
-        destroyed(){
-            console.log('ActiveUsers destroyed');
-        },
-    }
+console.log('ActiveUsers created')
+
+onMounted(() => console.log('ActiveUsers mounted'))
+onActivated(() => console.log('ActiveUsers activated'))
+onDeactivated(() => console.log('ActiveUsers deactivated'))
+onUnmounted(() => console.log('ActiveUsers unmounted'))
 </script>
 
 <style scoped lang="less">
-p{
-    width: 100%;
+p {
+  width: 100%;
 }
-.test-content{
-    width: 100%;
-    height: 2000px;
-
+.test-content {
+  width: 100%;
+  height: 2000px;
 }
 </style>

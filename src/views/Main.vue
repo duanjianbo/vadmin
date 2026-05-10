@@ -1,15 +1,11 @@
 <template>
-    <HomeContentLayout>
-            <span>这是主控台</span>
-    </HomeContentLayout>
+  <HomeContentLayout>
+    <span>这是主控台</span>
+  </HomeContentLayout>
 </template>
 
-<script>
-    export default {
-        name: "Main"
-    }
+<script setup lang="ts">
+defineOptions({ name: 'Main' })
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,12 +1,18 @@
 <template>
-  <div class="home-left" v-if="isShowingLeftLayout">
+  <div class="home-left" v-if="store.isShowingLeftLayout">
     <div class="home-left-top">
-      <img class="logo" alt="logo" src="../assets/logo.png"/>
-      <span>vadmin管理平台</span>
+      <img class="logo" alt="logo" src="../assets/logo.png" />
+      <span>vadmin 管理平台</span>
     </div>
-    <Menu theme="dark" width="240px" style="overflow-y:auto;" :active-name="$route.path" :open-names="[$route.matched[0].path]">
+    <Menu
+      theme="dark"
+      width="240px"
+      style="overflow-y:auto;"
+      :active-name="route.path"
+      :open-names="[route.matched[0].path]"
+    >
       <Submenu name="/dashboard">
-        <template slot="title">
+        <template #title>
           <Icon type="ios-paper" />
           Dashboard
         </template>
@@ -14,7 +20,7 @@
         <MenuItem name="/dashboard/workplace" to="/dashboard/workplace">工作台</MenuItem>
       </Submenu>
       <Submenu name="/users">
-        <template slot="title">
+        <template #title>
           <Icon type="ios-people" />
           用户管理
         </template>
@@ -22,7 +28,7 @@
         <MenuItem name="/users/active-users" to="/users/active-users">活跃用户</MenuItem>
       </Submenu>
       <Submenu name="3">
-        <template slot="title">
+        <template #title>
           <Icon type="ios-stats" />
           统计分析
         </template>
@@ -40,55 +46,48 @@
   </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    isShowingLeftLayout () {
-      return this.$store.state.isShowingLeftLayout
-    }
-  },
-  data(){
-    return {
-    }
-  },
-  mounted() {
-  }
-}
+<script setup lang="ts">
+import { useRoute } from 'vue-router'
+import { useAppStore } from '@/stores'
+
+const route = useRoute()
+const store = useAppStore()
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-  .home-left{
+.home-left {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: #191a23;
+  z-index: 40;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  .home-left-top {
     display: flex;
-    flex-direction: column;
-    width: auto;
-    background-color: #191a23;//white;
-    z-index:40;
-    box-shadow: 2px 0 6px rgba(0,21,41,.35);
-    .home-left-top{
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid #101117;//1px solid #eee;
-      color:rgba(255,255,255,.9);
-      font-weight: bolder;
-      font-size: 15px;
-      align-items: center;
-    }
-    .home-left-top .logo{
-      height:40px;
-      width: auto;
-      margin: 10px 10px 10px -5px;
-    }
-    .ivu-menu-vertical.ivu-menu-light:after{
-      width: 0;
-    }
-    .ivu-menu::-webkit-scrollbar{width: 2px;}
-    .ivu-menu::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-        background: #ededed;
-    }
-    .ivu-menu::-webkit-scrollbar-track {/*滚动条里面轨道*/
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-      background: #f1f1f1;
-    }
+    justify-content: center;
+    border-bottom: 1px solid #101117;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+    font-size: 15px;
+    align-items: center;
   }
+  .home-left-top .logo {
+    height: 40px;
+    width: auto;
+    margin: 10px 10px 10px -5px;
+  }
+  :deep(.ivu-menu-vertical.ivu-menu-light:after) {
+    width: 0;
+  }
+  :deep(.ivu-menu::-webkit-scrollbar) {
+    width: 2px;
+  }
+  :deep(.ivu-menu::-webkit-scrollbar-thumb) {
+    background: #ededed;
+  }
+  :deep(.ivu-menu::-webkit-scrollbar-track) {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #f1f1f1;
+  }
+}
 </style>

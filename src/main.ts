@@ -1,26 +1,25 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import VueCookies from 'vue-cookies'
+import ViewUIPlus from 'view-ui-plus'
+import 'view-ui-plus/dist/styles/viewuiplus.css'
+
 import App from './App.vue'
 import router from './router'
-import store from './store'
-import VueCookies from 'vue-cookies'
-import ViewUI from 'view-design';
-import 'view-design/dist/styles/iview.css';
 import HomeContentLayout from '@/components/HomeContentLayout.vue'
 
-Vue.config.productionTip = false
-Vue.use(VueCookies);
-Vue.use(ViewUI);
-Vue.component("HomeContentLayout", HomeContentLayout);
+const app = createApp(App)
 
-console.log("当前NODE_ENV："+process.env.NODE_ENV);
-console.log("当前API_URL："+process.env.VUE_APP_API_URL);
+app.use(createPinia())
+app.use(router)
+// vue-cookies 1.8.x 默认导出运行时即 VueCookies 实例本身（带 install），其 TS 类型与运行时不一致，
+// 这里使用 install 函数侧的类型即可正常注册
+app.use(VueCookies as any, { expires: '6h' })
+app.use(ViewUIPlus)
 
-/**配置cookies开始**/
-Vue.prototype.$cookies.config('6h','/') //默认保存6小时 根目录下
-/**配置cookies结束**/
+app.component('HomeContentLayout', HomeContentLayout)
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+console.log('当前 NODE_ENV：' + import.meta.env.MODE)
+console.log('当前 API_URL：' + import.meta.env.VITE_API_URL)
+
+app.mount('#app')

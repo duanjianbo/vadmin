@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
+<script setup lang="ts"></script>
+
 <style lang="less">
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-ul{
+ul {
   outline: 0;
   list-style: none;
 }
@@ -22,28 +25,31 @@ ul{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
-/** 覆盖iview ui框架的样式 start**/
-.ivu-table th{
-  background-color: unset!important;
+/** 覆盖 view-ui-plus 框架的样式 start **/
+.ivu-table th {
+  background-color: unset !important;
 }
 .ivu-menu-dark {
-    background: #191a23 !important;
+  background: #191a23 !important;
 }
 .ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {
-    background: #101117 !important;
+  background: #101117 !important;
 }
 .ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened .ivu-menu-submenu-title {
-    background: #191a23 !important;
+  background: #191a23 !important;
 }
-.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
-    color: #fff;
-    background: #191a23 !important;
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+  color: #fff;
+  background: #191a23 !important;
 }
-/** 覆盖iview ui框架的样式 end**/
+/** 覆盖 view-ui-plus 框架的样式 end **/
 /** iPad **/
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
 /** iPhone **/
-@media only screen and (min-width: 320px) and (max-width: 767px) {}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+}
 </style>
